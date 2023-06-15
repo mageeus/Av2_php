@@ -2,7 +2,6 @@
 require_once("class/class.Login.php");
 require_once("class/class.Aluno.php");
 require_once("header.php");
-require_once("funcao.php");
 $obj_login->revalidarLogin();
 ?>
 
@@ -25,7 +24,7 @@ $obj_login->revalidarLogin();
 
                 foreach ($rows as $registro) {
                     echo "<tr>";
-                    echo "<td><a href=form_aluno.php?alterarid=" . $registro['idaluno']  . '>' . $registro['idaluno'] . "</td>";
+                    echo "<td><a href=form_aluno.php?alterarid=" . $registro['idaluno'] . '>' . $registro['idaluno'] . "</td>";
                     echo "<td>" . $registro['nmaluno'] . "</td>";
                     echo "</tr>";
                 }
@@ -36,7 +35,7 @@ $obj_login->revalidarLogin();
             <?php
             if (isset($_GET['alterarid'])) {
                 $aluno = $aluno->listarAluno($_GET['alterarid']);
-            ?>
+                ?>
                 <form action="form_aluno.php" method="POST">
                     <input type="hidden" name="idaluno" value="<?php echo $aluno[0]['idaluno'] ?>" />
                     <input type="text" name="nmaluno" value="<?php echo $aluno[0]['nmaluno'] ?>" maxlength="150" />
@@ -44,7 +43,7 @@ $obj_login->revalidarLogin();
                     <input type="submit" value="Excluir" name="comando">
                 </form>
 
-            <?php
+                <?php
 
             }
 
@@ -68,7 +67,7 @@ $obj_login->revalidarLogin();
             //dumpF($_GET);
             //dumpF($_POST);
             //dumpF($aluno->incluirAluno("as"));
-
+            
             ?>
         </div>
         <div>
