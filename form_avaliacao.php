@@ -46,7 +46,7 @@ $obj_login->revalidarLogin();
                 Aluno: <input name="nmaluno" type="text" readonly value="<?php echo $selecionaAluno[0]['nmaluno'] ?>">
                 Disciplina: <input name="nmaluno" type="text" readonly
                 value="<?php echo $selecionaDisciplina[0]['dsdisciplina'] ?>">
-                Nota: <input name="nota" type="number" max="10" value="<?php echo $seleciona[0]['nota'] ?>">
+                Nota: <input name="nota" type="number" max="10" value="<?php echo $seleciona[0]['nota'] ?>" />
                 <input type="hidden" name="idavaliacao"value=" <?php echo $seleciona[0]['idavaliacao']?>" />
                 <input type="submit" name="comando" value="alterar" />
                 <input type="submit" name="comando" value="excluir" />
@@ -70,8 +70,8 @@ $obj_login->revalidarLogin();
                 }
                 ?>
             </select>
-            Nota: <input name="nota" type="number" max="10">
-            <input type="submit" name="comando" value="registrar" required />
+            Nota: <input name="nota" type="number" max="10" required />
+            <input type="submit" name="comando" value="registrar" />
         </form>
 
         <?php
@@ -79,7 +79,6 @@ $obj_login->revalidarLogin();
             $idaluno = $_POST['idaluno'];
             $iddisciplina = $_POST['iddisciplina'];
             $nota = $_POST['nota'];
-            var_dump($idavaliacao);
 
             if ($avaliacao->incluirAvaliacao($idaluno, $iddisciplina, $nota)) {
                 header("location:form_avaliacao.php");
