@@ -35,7 +35,7 @@ $obj_login->revalidarLogin();
             <?php
             if (isset($_GET['alterarid'])) {
                 $selecionaAluno = $aluno->listarAluno($_GET['alterarid']);
-                ?>
+            ?>
                 <form action="form_aluno.php" method="POST">
                     <input type="hidden" name="idaluno" value="<?php echo $selecionaAluno[0]['idaluno'] ?>" />
                     <input type="text" name="nmaluno" value="<?php echo $selecionaAluno[0]['nmaluno'] ?>" maxlength="150" />
@@ -43,7 +43,7 @@ $obj_login->revalidarLogin();
                     <input type="submit" value="Excluir" name="comando">
                 </form>
 
-                <?php
+            <?php
 
             }
 
@@ -64,10 +64,6 @@ $obj_login->revalidarLogin();
                 }
             }
 
-            //dumpF($_GET);
-            //dumpF($_POST);
-            //dumpF($aluno->incluirAluno("as"));
-            
             ?>
         </div>
         <div>
@@ -80,10 +76,6 @@ $obj_login->revalidarLogin();
                 <input type="submit" value="Incluir" name="comando">
             </form>
 
-            <?php
-//    var_dump($_GET['alterarid']);
-
-            ?>
         </div>
     </div>
 

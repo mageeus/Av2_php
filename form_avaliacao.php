@@ -40,18 +40,17 @@ $obj_login->revalidarLogin();
             $seleciona = $avaliacao->listarAvaliacao($_GET['alterar']);
             $selecionaAluno = $aluno->listarAluno($seleciona[0]['idaluno']);
             $selecionaDisciplina = $disciplina->listarDisciplina($seleciona[0]['iddisciplina']);
-            ?>
+        ?>
             <hr>
             <form action="form_avaliacao.php" method="POST">
                 Aluno: <input name="nmaluno" type="text" readonly value="<?php echo $selecionaAluno[0]['nmaluno'] ?>">
-                Disciplina: <input name="nmaluno" type="text" readonly
-                value="<?php echo $selecionaDisciplina[0]['dsdisciplina'] ?>">
+                Disciplina: <input name="nmaluno" type="text" readonly value="<?php echo $selecionaDisciplina[0]['dsdisciplina'] ?>">
                 Nota: <input name="nota" type="number" max="10" value="<?php echo $seleciona[0]['nota'] ?>" />
-                <input type="hidden" name="idavaliacao"value=" <?php echo $seleciona[0]['idavaliacao']?>" />
+                <input type="hidden" name="idavaliacao" value=" <?php echo $seleciona[0]['idavaliacao'] ?>" />
                 <input type="submit" name="comando" value="alterar" />
                 <input type="submit" name="comando" value="excluir" />
             </form>
-            <?php } ?>
+        <?php } ?>
         <hr>
         ÁREA PRA REGISTRAR NOTAS
         <hr>
@@ -91,17 +90,7 @@ $obj_login->revalidarLogin();
             header("location:form_avaliacao.php");
         }
         ?>
-        <?php
-        //$avaliacao->alterarAvaliacao($seleciona[0]['idavaliacao'], 3)
-        //var_dump($_POST['nota']);
-        /*
-        var_dump($_GET['alterar']);
-        echo "<br>";
-        var_dump($aluno->listarAluno($_GET['alterar']));
-        echo "<br>";
-        var_dump($aluno->listarAluno("17"));
-        echo "<br>";
-        var_dump($selecionaAluno[0]['idaluno']);
-        */
-        ?>
+
+    </div>
+
 </body>

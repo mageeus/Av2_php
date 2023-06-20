@@ -1,7 +1,5 @@
 <?php
 
-
-
 class BancoDeDados
 {
     private $host;
@@ -65,25 +63,5 @@ class BancoDeDados
 
         return $rows;
     }
-/*
-    public function executarInsert($query)
-    {
-        $this->resultado = $this->executarConsulta(($query));
-        
-        return (mysqli_affected_rows($this->conexao) == 1);
-    }
-*/
+
 }
-/*
-$db = new BancoDeDados();
-echo($db->executarConsulta('insert into aluno(nmaluno) values ("oi")'));
-//echo "Aqui";
-*/
-/*
-function dumpF($string)
-{
-    echo "<pre>";
-    var_dump($string);
-    echo "</pre>";
-}
-*/

@@ -34,8 +34,7 @@ $obj_login->revalidarLogin();
                 ?>
                 <form action="form_disciplina.php" method="POST">
                     <input type="hidden" name="iddisciplina" value="<?php echo $disciplina[0]['iddisciplina'] ?>" />
-                    <input type="text" name="dsdisciplina" value="<?php echo $disciplina[0]['dsdisciplina'] ?>"
-                        maxlength="30" />
+                    <input type="text" name="dsdisciplina" value="<?php echo $disciplina[0]['dsdisciplina'] ?>" maxlength="30" />
                     <input type="submit" value="Alterar" name="comando">
                     <input type="submit" value="Excluir" name="comando">
                 </form>

@@ -7,16 +7,14 @@ class TratamentoDeInput{
         if (empty(trim($informacao))) return true;
 
         foreach ($this->caracteresIndesejaveis as $caractere) {
-            if (str_contains($informacao, $caractere)) {
+            if (strstr($informacao, $caractere)) {
                 return true;
-            } else {
+            }/* else {
                 return false;
-            }
+            }*/
         }
     }
 }
-
-
 
 #$itemTeste = new TratamentoDeInput();
 #var_dump($itemTeste->caracterInvalido('"'));

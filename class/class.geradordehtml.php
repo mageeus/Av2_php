@@ -19,8 +19,6 @@ class GeradorDeHTML
     }
 }
 
-
-
 $aluno = new Aluno();
 $array = $aluno->listarAlunos();
 

@@ -37,7 +37,7 @@ $obj_login->revalidarLogin();
 
         <?php
         if (isset($_GET['alterar'])) {
-            ?>
+        ?>
             <hr>
             ***Área de manutenção
             <hr>
@@ -73,7 +73,6 @@ $obj_login->revalidarLogin();
         <?php
         if (isset($_POST['comando']) && ($_POST['comando'] == "Cadastrar")) {
             echo "CÓDIGO PARA FAZER O INSERT";
-            //var_dump($_POST);
             $dslogin = htmlspecialchars($_POST['dslogin']);
             $dssenha = md5($_POST['dssenha']);
             $idaluno = $_POST['idaluno'];

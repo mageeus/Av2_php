@@ -24,19 +24,6 @@
                 <input style="background-color: blue; color: white;" type="submit" value="Acessar" />
             </form>
 
-            <?php
-            /*
-        if (isset($_GET['erro']))
-        {
-            if (array_key_exists($_GET['erro'], $tabela_de_erro))
-            {
-                echo '<br /><span style="color:red">' . $tabela_de_erro[$_GET['erro']] . '</span><br />';
-            }
-        }
-        */
-    ?>
-
-
         </div>
         <div class="right" style="background-color:white;">&nbsp;</div>
 

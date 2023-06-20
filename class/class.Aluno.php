@@ -43,5 +43,6 @@ class Aluno extends BancoDeDados
 
 $aluno = new Aluno();
 
-//dumpF($aluno->listarAlunos());
-//dumpF($aluno->listarAluno(1));
+//var_dump($aluno->listarAluno(1));
+//echo "<br>";
+//var_dump($aluno->listarAlunos());
