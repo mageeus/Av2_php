@@ -16,10 +16,10 @@ class ValidacoesDeFormulario extends TratamentoDeInput
     {
         if (parent::caracterInvalido($nome) == true) {
             if (strlen($nome) > self::_MAXNOME) {
-                return 'muito longo'; //apenas para verificar o erro certo, dps mudar para false
+                return false; //apenas para verificar o erro certo, dps mudar para false
             }
             if (strlen($nome) < self::_MINNOME) {
-                return 'muito curto'; //apenas para verificar o erro certo, dps mudar para false
+                return false; //apenas para verificar o erro certo, dps mudar para false
             }
             return 'caracter invalido';
         }
@@ -48,11 +48,11 @@ class ValidacoesDeFormulario extends TratamentoDeInput
     {
         if (parent::caracterInvalido($senha) == true) {
             if (strlen($senha) > self::_MAXSENHA) {
-                return 'muito longa'; //apenas para verificar o erro certo, dps mudar para false
+                return false; //apenas para verificar o erro certo, dps mudar para false
             }
 
             if (strlen($senha) < self::_MINSENHA) {
-                return 'muito curta'; //apenas para verificar o erro certo, dps mudar para false
+                return false; //apenas para verificar o erro certo, dps mudar para false
             }
 
             return 'caracter invalido';
@@ -63,7 +63,7 @@ class ValidacoesDeFormulario extends TratamentoDeInput
 }
 
 $validar = new ValidacoesDeFormulario();
-/*
+
 echo 'nome valido: ', var_dump($validar->validarNome('mateus')), '<br>';
 echo 'nome invalido: ', var_dump($validar->validarNome('mateus<')), '<br>';
 
@@ -76,4 +76,3 @@ echo '<br>';
 
 echo 'senha valida: ', var_dump($validar->validarSenha('senhaComplicada')), '</br>';
 echo 'senha invalida: ', var_dump($validar->validarSenha('senha>')), '</br>';
-*/
