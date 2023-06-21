@@ -1,5 +1,5 @@
 <div class="sidenav">
-        <a href="form_inicial.php">Página Inicial</a>
+        <a href="welcome.php">Página Inicial</a>
         <a href="form_aluno.php">Administração de alunos</a>
         <a href="form_login.php">Administração de logins</a>
         <a href="form_disciplina.php">Administração Matérias</a>
