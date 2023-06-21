@@ -43,7 +43,7 @@ $obj_login->revalidarLogin();
             <hr>
             <form action="form_login.php" method="post">
                 DSLOGIN: <input name="dslogin" type="text" maxlength="20" readonly value="<?php echo $_GET['alterar'] ?>">
-                DSSENHA: <input name="dssenha" type="password" maxlength="20" value="">
+                DSSENHA: <input name="dssenha" type="password" maxlength="20" value="" minlength="6">
                 <?php
                 if ($_GET['alterar'] != 'admin') {
                     echo '<input type="submit" name="comando" value="ExcluirAcesso" />';
@@ -56,8 +56,8 @@ $obj_login->revalidarLogin();
         *** Área de inclusão do registro
         <hr>
         <form action="form_login.php" method="post">
-            DSLOGIN: <input name="dslogin" type="text" maxlength="20" />
-            DSSENHA: <input name="dssenha" type="password" maxlength="20" />
+            DSLOGIN: <input name="dslogin" type="text" maxlength="20" required/>
+            DSSENHA: <input name="dssenha" type="password" minlength="6" maxlength="20" required/>
             <select name="idaluno">
                 <?php
                 $registros = $aluno->listarAlunosNaoRelacionados();

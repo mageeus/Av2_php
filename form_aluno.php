@@ -72,7 +72,7 @@ $obj_login->revalidarLogin();
             <h3>Incluir Aluno</h3>
 
             <form action="form_aluno.php" method="POST">
-                <input type="text" name="nmaluno" value="" maxlength="150" />
+                <input type="text" name="nmaluno" value="" maxlength="150" required/>
                 <input type="submit" value="Incluir" name="comando">
             </form>
 
