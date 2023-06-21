@@ -38,7 +38,7 @@ $obj_login->revalidarLogin();
             ?>
                 <form action="form_aluno.php" method="POST">
                     <input type="hidden" name="idaluno" value="<?php echo $selecionaAluno[0]['idaluno'] ?>" />
-                    <input type="text" name="nmaluno" value="<?php echo $selecionaAluno[0]['nmaluno'] ?>" maxlength="150" />
+                    <input type="text" name="nmaluno" value="<?php echo $selecionaAluno[0]['nmaluno'] ?>" maxlength="150" required/>
                     <input type="submit" value="Alterar" name="comando">
                     <input type="submit" value="Excluir" name="comando">
                 </form>
